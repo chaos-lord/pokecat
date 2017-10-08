@@ -416,7 +416,7 @@ def populate_pokeset(pokeset, skip_ev_check=False):
 
     for ability_ in pokeset["ability"]:
         pokeset["tags"].append("ability+%s" % normalize_name(ability_["name"]))
-    pokeset["tags"].append("set+%s" % normalize_name(pokeset["setname"]))
+    pokeset["tags"].append("setname+%s" % normalize_name(pokeset["setname"]))
     if pokeset["rarity"] > 0:
         pokeset["tags"].append("matchmaker-enabled")
 

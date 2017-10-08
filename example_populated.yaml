@@ -35,7 +35,7 @@ species:
     name: Arceus
     types: [Fire]
 stats: {atk: 269, def: 220, hp: 350, spA: 253, spD: 253, spe: 261}
-tags: [ability+multitype, biddable, form+0, level+100, matchmaker-enabled, set+standard,
+tags: [ability+multitype, biddable, form+0, level+100, matchmaker-enabled, setname+standard,
     species+493, species+arceus, type+fire]
 ---
 ability:
@@ -103,7 +103,7 @@ species:
     types: [Water]
 stats: {atk: 207, def: 176, hp: 273, spA: 113, spD: 206, spe: 128}
 tags: [ability+hydration, ability+thick-fat, biddable, form+0, level+100, matchmaker-enabled,
-    set+physical, shiny, species+86, species+seel, type+water, uber]
+    setname+physical, shiny, species+86, species+seel, type+water, uber]
 ---
 ability:
 - {description: '', id: 121, name: Multitype}
@@ -140,5 +140,5 @@ species:
     name: Arceus
     types: [Fire]
 stats: {atk: 269, def: 220, hp: 350, spA: 253, spD: 253, spe: 261}
-tags: [ability+multitype, form+0, hidden, level+100, matchmaker-enabled, set+standard,
+tags: [ability+multitype, form+0, hidden, level+100, matchmaker-enabled, setname+standard,
     shiny, species+493, species+arceus, type+fire]
