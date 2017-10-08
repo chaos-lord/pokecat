@@ -166,5 +166,5 @@ All Pokémon, items and abilities must be from 4th generation or earlier, becaus
   - `form+0` if the pokeset has the form 0. `0` can be any form number respectively.
   - `setname+standard` if the pokeset's setname is standard. `standard` can be any setname respectively.
     The name will be normalized, which usually means lowercase with spaces removed by `-` and other special characters removed.
-  - `matchmaker-active` if the rarity is above 0.
+  - `matchmaker-enabled` if the rarity is above 0.
   - `ability+levitate` if the pokeset's ability has the levitate ability as an option. `levitate` can be any ability respectively.
