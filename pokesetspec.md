@@ -5,7 +5,7 @@ This document specifies the format in which Pokémon sets are defined for Twitch
 
 ## Requirements
 
-The format must be easily understandable and usable by people not adept in programming or similar technical tasks. This implies error tolerance against common mistakes such as: 
+The format must be easily understandable and usable by people not adept in programming or similar technical tasks. This implies error tolerance against common mistakes such as:
 - additional whitespace
 - spelling errors
 - wrong case-sensitivity
@@ -82,11 +82,11 @@ All Pokémon, items and abilities must be from 4th generation or earlier, becaus
 
 **nature**
   : The Pokémon's nature. Can either be a nature name, a nature number (0 = Hardy, 24 = Quirky) or a nature defined by boosted and nerfed stat (for example `+atk -spD`)
-  
+
 **ivs**
   : The Pokémon's Individual Values. Can either be a single number (e.g. `0`) to be the same for all stats, or a dictionary containing a value for each stat (`hp`, `atk`, `def`, `spe`, `spA` and `spD`).
   : *Note:* An inline dictionary consists of comma-separated `key:value` pairs enclosed in curly braces, like in the example.
-  
+
 **evs**
   : Same as *IVs*, but for Effort Values. The sum of all values cannot exceed 510, and one single stat cannot have more than 252 EVs.
 
@@ -106,21 +106,21 @@ All Pokémon, items and abilities must be from 4th generation or earlier, becaus
   : *Note:* Mixing male and female with no gender in the same species can crash PBR. For each species (therefore also across all set for that species) agree on sticking to whether that species is genderless or not.
 
 **form**
-  : Defaults to `0`. Can be a form number, or a form name specific to a given Pokémon. The following form names are valid:  
-    - Unown: A-Z, ? and !  
-    - Burmy and Wormadam: Plant, Sandy, Trash  
-    - Deoxys: Attack, Defense, Speed  
+  : Defaults to `0`. Can be a form number, or a form name specific to a given Pokémon. The following form names are valid:
+    - Unown: A-Z, ? and !
+    - Burmy and Wormadam: Plant, Sandy, Trash
+    - Deoxys: Attack, Defense, Speed
     - Shellos and Gastrodon: West and East
 
 **item**
   : Defaults to `null` (no item). The Pokémon's held item. Can either be an item name or an item number. Can also be a *list of items* (e.g. `[Chesto Berry, Poison Barb]`) to let RNG decide.
 
 **displayname**
-  : Defaults to the species' name modified to include eventual form names. For example:  
-    - Deoxys in attack form would get the display name "Deoxys Attack"  
-    - Unown in A-Form would get the display name "Unown A"  
-    - Arceus with the Multitype-ability the item Flame Plate (although not technically a form) would get the display name "Arceus Fire".  
-    - Any shiny Pokémon would get ` (Shiny)` appended  
+  : Defaults to the species' name modified to include eventual form names. For example:
+    - Deoxys in attack form would get the display name "Deoxys Attack"
+    - Unown in A-Form would get the display name "Unown A"
+    - Arceus with the Multitype-ability the item Flame Plate (although not technically a form) would get the display name "Arceus Fire".
+    - Any shiny Pokémon would get ` (Shiny)` appended
     Specifying a custom displayname overwrites the generated one.
 
 **happiness**
@@ -167,4 +167,4 @@ All Pokémon, items and abilities must be from 4th generation or earlier, becaus
   - `setname+standard` if the pokeset's setname is standard. `standard` can be any setname respectively.
     The name will be normalized, which usually means lowercase with spaces removed by `-` and other special characters removed.
   - `matchmaker-enabled` if the rarity is above 0.
-  - `ability+levitate` if the pokeset's ability has the levitate ability as an option. `levitate` can be any ability respectively.
+  - `ability+levitate` if the pokeset's ability has the levitate ability as an option. `levitate` can be any ability respectively. If multiple abilities are avalible, the resulting mon(s) may not have the ability on the tag you filtered by.
